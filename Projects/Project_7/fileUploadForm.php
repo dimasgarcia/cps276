@@ -39,7 +39,7 @@ require 'fileUploadProc.php';
             </form>
         </div>
 
-        <!-- Link to File List -->
+        <!-- Link to the File List -->
         <a href="listFiles.php" class="btn btn-link">Show File List</a>
     </div>
 

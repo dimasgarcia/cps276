@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['upload'])) {
         // to set the directory to /tmp/testdocuments (writable by PHP)
         $targetDir = "/tmp/testdocuments/";
 
-        // t0 check if the directory exists; create it if not
+        // to check if the directory exists; and create it if not
         if (!is_dir($targetDir)) {
             mkdir($targetDir, 0777, true);
         }

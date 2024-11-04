@@ -15,7 +15,7 @@ class DatabaseConn {
             $dbUsr = 'digarcia';
             $dbPass = 'feA4axh4j4Ay';
 
-            // Establish a new PDO connection
+            // to establish a new PDO connection
             $this->conn = new PDO('mysql:host=' . $dbHost . ';dbname=' . $dbName, $dbUsr, $dbPass);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {

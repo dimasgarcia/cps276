@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['upload'])) {
     $fileName = $_POST['fileName'];
     $file = $_FILES['fileToUpload'];
 
-    // Check file type and size
+    // to check file type and size
     if ($file['type'] != 'application/pdf') {
         $uploadMessage = "File must be a PDF file.";
     } elseif ($file['size'] > 100000) {
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['upload'])) {
         // to set the directory to /tmp/testdocuments (writable by PHP)
         $targetDir = "/tmp/testdocuments/";
 
-        // t check if the directory exists; create it if not
+        // t0 check if the directory exists; create it if not
         if (!is_dir($targetDir)) {
             mkdir($targetDir, 0777, true);
         }

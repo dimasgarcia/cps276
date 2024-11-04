@@ -22,7 +22,7 @@ require 'fileUploadProc.php';
             </div>
         <?php endif; ?>
 
-        <!-- th upload Form -->
+        <!-- the upload Form -->
         <div class="card p-4 mb-4">
             <form action="fileUploadForm.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">

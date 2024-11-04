@@ -13,24 +13,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['upload'])) {
     } elseif ($file['size'] > 100000) {
         $uploadMessage = "File is too big.";
     } else {
-        // Set the directory to /tmp/testdocuments (writable by PHP)
+        // to set the directory to /tmp/testdocuments (writable by PHP)
         $targetDir = "/tmp/testdocuments/";
 
-        // Check if the directory exists; create it if not
+        // t check if the directory exists; create it if not
         if (!is_dir($targetDir)) {
             mkdir($targetDir, 0777, true);
         }
 
         $targetFile = $targetDir . basename($file['name']);
 
-        // Attempt to move the file
+        // to move the file
         if (move_uploaded_file($file['tmp_name'], $targetFile)) {
             $uploadMessage = "File has been added.";
             $pdo = new PdoMethods();
             $sql = "INSERT INTO uploaded_files (file_name, file_path) VALUES (:fileName, :filePath)";
             $bindings = [
                 [':fileName', $fileName, 'str'],
-                [':filePath', $targetFile, 'str']  // Storing the /tmp path
+                [':filePath', $targetFile, 'str']  // for storing the /tmp path
             ];
             $result = $pdo->otherBinded($sql, $bindings);
             if ($result !== 'noerror') {

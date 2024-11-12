@@ -1,9 +1,9 @@
 "use strict";
 
-// Initialize name management functions
+
 let nameManager = {};
 
-// Initialize function
+
 nameManager.init = function() {
     const addNameBtn = document.querySelector('#addName');
     const getNamesBtn = document.querySelector('#getNames');
@@ -18,7 +18,7 @@ nameManager.init = function() {
     }
 }
 
-// Function to add a name
+
 nameManager.addName = function() {
     const nameInput = document.querySelector('#flname');
     const messageBox = document.querySelector('#displayNames');
@@ -49,14 +49,14 @@ nameManager.addName = function() {
 
         if (json.masterstatus === 'success') {
             messageBox.innerHTML = "<p class='text-success'>Name has been added</p>";
-            nameInput.value = ""; // Clear the input field
+            nameInput.value = ""; 
         } else {
             messageBox.innerHTML = `<p class='text-danger'>${json.msg}</p>`;
         }
     }, data);
 }
 
-// Function to display names
+
 nameManager.displayNames = function() {
     const messageBox = document.querySelector('#displayNames');
 
@@ -82,7 +82,7 @@ nameManager.displayNames = function() {
     });
 }
 
-// Function to clear names
+
 nameManager.clearNames = function() {
     const messageBox = document.querySelector('#displayNames');
 
@@ -108,5 +108,5 @@ nameManager.clearNames = function() {
     });
 }
 
-// Run initialization on page load
+
 nameManager.init();

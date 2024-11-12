@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Name Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Add, Display, and Clear Names</h1>
+
+    <div class="form-group">
+        <label for="flname">First and Last Name</label>
+        <input type="text" class="form-control" id="flname" placeholder="Enter first and last name">
+    </div>
+
+    <div class="d-flex justify-content-between mb-4">
+        <button id="addName" class="btn btn-primary">Add Name</button>
+        <button id="getNames" class="btn btn-info">Display Names</button>
+        <button id="clearNames" class="btn btn-danger">Clear Names</button>
+    </div>
+
+    <div id="displayNames" class="border p-3 bg-white">
+        <!-- Messages and names will be displayed here -->
+    </div>
+</div>
+
+<!-- JavaScript files -->
+<script src="Util.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
